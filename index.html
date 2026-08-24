@@ -18,7 +18,7 @@
     body {
       font-family: Arial, sans-serif;
       background:
-        linear-gradient(rgba(8, 15, 30, 0.90), rgba(8, 15, 30, 0.95)),
+        linear-gradient(rgba(8, 15, 30, 0.92), rgba(8, 15, 30, 0.96)),
         url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80");
       background-size: cover;
       background-position: center;
@@ -27,12 +27,14 @@
       line-height: 1.6;
     }
 
+    /* NAVIGATION */
+
     nav {
       width: 100%;
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(17, 24, 39, 0.95);
+      background: rgba(17, 24, 39, 0.96);
       backdrop-filter: blur(10px);
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
     }
@@ -77,41 +79,37 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 60px 20px;
-    }
-
-    .hero-content {
-      max-width: 1150px;
-      width: 100%;
-      display: grid;
-      grid-template-columns: 300px 1fr;
-      gap: 55px;
-      align-items: center;
-    }
-
-    .hero-left {
+      padding: 70px 20px;
       text-align: center;
     }
 
-    .hero-left img {
-      width: 240px;
-      height: 240px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 5px solid #60a5fa;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
-      background: #fff;
+    .hero-content {
+      max-width: 900px;
+      width: 100%;
+      margin: auto;
     }
 
-    .hero-right h1 {
-      font-size: 50px;
-      line-height: 1.15;
-      margin-bottom: 12px;
+    .hero-badge {
+      display: inline-block;
+      padding: 8px 18px;
+      margin-bottom: 20px;
+      border-radius: 999px;
+      background: rgba(37, 99, 235, 0.18);
+      border: 1px solid rgba(96, 165, 250, 0.4);
+      color: #93c5fd;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .hero h1 {
+      font-size: 58px;
+      line-height: 1.1;
+      margin-bottom: 15px;
       color: #ffffff;
     }
 
-    .hero-right h2 {
-      font-size: 25px;
+    .hero h2 {
+      font-size: 27px;
       font-weight: normal;
       color: #93c5fd;
       margin-bottom: 20px;
@@ -119,18 +117,25 @@
       padding: 0;
     }
 
-    .hero-right p {
+    .hero-stack {
+      font-size: 17px;
+      font-weight: bold;
+      color: #60a5fa;
+      margin-bottom: 22px;
+    }
+
+    .hero-description {
+      max-width: 800px;
+      margin: auto;
       font-size: 17px;
       color: #d1d5db;
-      max-width: 780px;
-      margin-bottom: 25px;
+      margin-bottom: 30px;
     }
 
     .hero-buttons a {
       display: inline-block;
-      margin-right: 12px;
-      margin-top: 10px;
-      padding: 12px 23px;
+      margin: 8px;
+      padding: 12px 24px;
       border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
@@ -144,7 +149,7 @@
 
     .btn-primary:hover {
       background: #1d4ed8;
-      transform: translateY(-2px);
+      transform: translateY(-3px);
     }
 
     .btn-secondary {
@@ -156,7 +161,7 @@
     .btn-secondary:hover {
       background: #60a5fa;
       color: #0f172a;
-      transform: translateY(-2px);
+      transform: translateY(-3px);
     }
 
     /* GENERAL */
@@ -187,6 +192,35 @@
     section p {
       color: #e5e7eb;
       font-size: 16px;
+    }
+
+    /* ABOUT */
+
+    .about-highlight {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-top: 25px;
+    }
+
+    .highlight-card {
+      background: rgba(255, 255, 255, 0.07);
+      padding: 18px;
+      border-radius: 10px;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .highlight-card strong {
+      display: block;
+      color: #60a5fa;
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .highlight-card span {
+      color: #d1d5db;
+      font-size: 14px;
     }
 
     /* SKILLS */
@@ -327,6 +361,12 @@
       padding: 18px;
       border-radius: 10px;
       border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: 0.3s ease;
+    }
+
+    .certification:hover {
+      transform: translateY(-4px);
+      border-color: rgba(96, 165, 250, 0.4);
     }
 
     .certification strong {
@@ -399,30 +439,27 @@
 
       .hero {
         min-height: auto;
-        padding: 70px 20px;
+        padding: 80px 20px;
       }
 
-      .hero-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 30px;
+      .hero h1 {
+        font-size: 39px;
       }
 
-      .hero-left img {
-        width: 190px;
-        height: 190px;
+      .hero h2 {
+        font-size: 21px;
       }
 
-      .hero-right h1 {
-        font-size: 36px;
+      .hero-stack {
+        font-size: 14px;
       }
 
-      .hero-right h2 {
-        font-size: 19px;
-      }
-
-      .hero-right p {
+      .hero-description {
         font-size: 15px;
+      }
+
+      .about-highlight {
+        grid-template-columns: 1fr;
       }
 
       section {
@@ -431,6 +468,10 @@
 
       h2 {
         font-size: 25px;
+      }
+
+      .projects {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -466,47 +507,43 @@
 
     <div class="hero-content">
 
-      <div class="hero-left">
-
-        <img
-          src="profile.jpg"
-          alt="Eeshani Boyapati"
-        />
-
+      <div class="hero-badge">
+        JUNIOR SOFTWARE ENGINEER
       </div>
 
+      <h1>
+        Eeshani Boyapati
+      </h1>
 
-      <div class="hero-right">
+      <h2>
+        Building Backend & Full-Stack Applications
+      </h2>
 
-        <h1>Eeshani Boyapati</h1>
+      <div class="hero-stack">
+        Python &nbsp;|&nbsp;
+        Java &nbsp;|&nbsp;
+        Spring Boot &nbsp;|&nbsp;
+        Django &nbsp;|&nbsp;
+        SQL
+      </div>
 
-        <h2>
-          Junior Software Engineer
-        </h2>
+      <p class="hero-description">
+        Junior Software Engineer with an M.S. in Computer and Information Science
+        and hands-on experience building Java and Python backend and full-stack
+        applications. Skilled in Spring Boot, Django, REST APIs, SQL, MySQL,
+        PostgreSQL, and MongoDB, with strong foundations in object-oriented
+        programming, software testing, database design, and software development.
+      </p>
 
-        <p>
-          Python | Java | Spring Boot | Django | SQL
-        </p>
+      <div class="hero-buttons">
 
-        <p>
-          Junior Software Engineer with an M.S. in Computer and Information Science
-          and hands-on experience building Java and Python backend and full-stack
-          applications. Skilled in Spring Boot, Django, REST APIs, SQL, MySQL,
-          PostgreSQL, and MongoDB, with a strong foundation in object-oriented
-          programming, software testing, database design, and software development.
-        </p>
+        <a href="#projects" class="btn-primary">
+          View My Projects
+        </a>
 
-        <div class="hero-buttons">
-
-          <a href="#projects" class="btn-primary">
-            View Projects
-          </a>
-
-          <a href="#contact" class="btn-secondary">
-            Contact Me
-          </a>
-
-        </div>
+        <a href="#contact" class="btn-secondary">
+          Let's Connect
+        </a>
 
       </div>
 
@@ -525,30 +562,51 @@
       <h2>About Me</h2>
 
       <p>
-        I am a Computer Science graduate with a Master of Science in Computer and
-        Information Science from the University of North Texas. My technical
+        I am a Computer Science graduate with a Master of Science in Computer
+        and Information Science from the University of North Texas. My technical
         interests include backend development, full-stack application development,
-        REST API development, database engineering, software testing, and
-        cloud technologies.
+        REST API development, database engineering, software testing, and cloud
+        technologies.
       </p>
 
       <br>
 
       <p>
         I enjoy building practical software applications using Java, Python,
-        Spring Boot, Django, SQL, and modern development tools. My project
-        experience includes booking systems, task management applications,
-        expense tracking applications, and data analysis projects.
+        Spring Boot, Django, SQL, and modern development tools. My academic and
+        project work includes booking systems, task management applications,
+        expense tracking applications, REST APIs, database workflows, and
+        machine learning projects.
       </p>
 
       <br>
 
       <p>
-        I am actively seeking Junior Software Engineer, Software Developer,
+        I am interested in Junior Software Engineer, Software Developer,
         Backend Developer, Full-Stack Developer, and Associate Software Engineer
         opportunities where I can continue developing reliable and scalable
         software solutions.
       </p>
+
+
+      <div class="about-highlight">
+
+        <div class="highlight-card">
+          <strong>Java</strong>
+          <span>Spring Boot & REST APIs</span>
+        </div>
+
+        <div class="highlight-card">
+          <strong>Python</strong>
+          <span>Django & Application Development</span>
+        </div>
+
+        <div class="highlight-card">
+          <strong>Databases</strong>
+          <span>MySQL | PostgreSQL | MongoDB</span>
+        </div>
+
+      </div>
 
     </section>
 
@@ -587,7 +645,7 @@
           <span>REST APIs</span>
           <span>API Development</span>
           <span>CRUD</span>
-          <span>OOP</span>
+          <span>Object-Oriented Programming</span>
           <span>Django ORM</span>
         </div>
 
@@ -691,17 +749,20 @@
       <div class="projects">
 
 
-        <!-- PROJECT 1 -->
+        <!-- INDOOR SPORTS -->
 
         <div class="card">
 
-          <h3>Indoor Sports Booking Management System</h3>
+          <h3>
+            Indoor Sports Booking Management System
+          </h3>
 
           <div class="project-stack">
             Django | Python | MySQL
           </div>
 
           <ul>
+
             <li>
               Eliminated double-booking scenarios by implementing
               booking-conflict validation and scheduling logic that verified
@@ -710,13 +771,14 @@
 
             <li>
               Supported 100+ booking records through a normalized MySQL
-              schema covering users, facilities, reservations, and equipment.
+              schema covering users, facilities, reservations, and equipment
+              while maintaining relational data integrity.
             </li>
 
             <li>
               Implemented role-based access for users and administrators,
               enabling reservation approval, cancellation, management,
-              and tracking.
+              and tracking through controlled application workflows.
             </li>
 
             <li>
@@ -724,22 +786,26 @@
               operations, and frontend templates into an end-to-end
               booking system.
             </li>
+
           </ul>
 
         </div>
 
 
-        <!-- PROJECT 2 -->
+        <!-- CAN BUS -->
 
         <div class="card">
 
-          <h3>Vehicle CAN Bus Data Analysis</h3>
+          <h3>
+            Vehicle CAN Bus Data Analysis
+          </h3>
 
           <div class="project-stack">
             Python | Pandas | Scikit-learn | Matplotlib | Seaborn
           </div>
 
           <ul>
+
             <li>
               Detected abnormal vehicle communication patterns by analyzing
               a 100-record CAN bus telemetry dataset containing speed,
@@ -748,8 +814,8 @@
 
             <li>
               Prepared telemetry data for anomaly detection by handling
-              missing values, normalizing features, and engineering
-              relevant attributes using Pandas and NumPy.
+              missing values, normalizing features, and engineering relevant
+              attributes using Pandas and NumPy.
             </li>
 
             <li>
@@ -763,22 +829,26 @@
               correlation analysis comparing normal and injected
               message behavior.
             </li>
+
           </ul>
 
         </div>
 
 
-        <!-- PROJECT 3 -->
+        <!-- TASKFLOW -->
 
         <div class="card">
 
-          <h3>TaskFlow – Task Management Application</h3>
+          <h3>
+            TaskFlow – Task Management Application
+          </h3>
 
           <div class="project-stack">
             Python | Git
           </div>
 
           <ul>
+
             <li>
               Automated task prioritization by developing a command-line
               application that sorts and filters tasks by urgency,
@@ -793,24 +863,29 @@
 
             <li>
               Implemented complete CRUD functionality with deadline
-              tracking and structured task-management logic.
+              tracking and structured task-management logic for
+              repeatable command-line workflows.
             </li>
+
           </ul>
 
         </div>
 
 
-        <!-- PROJECT 4 -->
+        <!-- BUDGETACE -->
 
         <div class="card">
 
-          <h3>BudgetACE – Expense Tracking Application</h3>
+          <h3>
+            BudgetACE – Expense Tracking Application
+          </h3>
 
           <div class="project-stack">
             HTML | CSS | JavaScript
           </div>
 
           <ul>
+
             <li>
               Automated budget calculations by dynamically computing
               transaction totals, category summaries, and remaining
@@ -824,9 +899,10 @@
             </li>
 
             <li>
-              Developed a responsive Flexbox interface supporting
-              desktop and mobile screen sizes.
+              Expanded cross-device usability by developing a responsive
+              Flexbox interface supporting desktop and mobile screen sizes.
             </li>
+
           </ul>
 
         </div>
