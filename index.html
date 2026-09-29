@@ -800,6 +800,340 @@
       font-size: 11px;
       font-weight: 600;
     }
+```html
+<!-- EXPERIENCE -->
+<section id="experience">
+
+  <div class="section-label">CAREER</div>
+  <h2>Experience</h2>
+
+  <div class="experience-timeline">
+
+    <!-- ONE COMMUNITY -->
+    <div class="experience-card">
+
+      <div class="experience-top">
+        <div>
+          <h3>Software Development Volunteer</h3>
+          <h4>One Community</h4>
+        </div>
+
+        <div class="experience-date">
+          Jul 2026 – Present
+        </div>
+      </div>
+
+      <div class="experience-location">
+        Remote · Software Development
+      </div>
+
+      <p class="experience-summary">
+        Contributing to an open-source software and web development environment,
+        improving user-facing pages, application functionality, content structure,
+        and overall website usability.
+      </p>
+
+      <ul>
+        <li>
+          Developed and updated responsive web pages using
+          <strong>HTML, CSS, JavaScript, React, Python, and Django</strong>.
+        </li>
+
+        <li>
+          Resolved UI, content, and usability issues across multiple website
+          pages while improving consistency and user experience.
+        </li>
+
+        <li>
+          Worked with structured website content, page layouts, images,
+          and frontend components to deliver maintainable improvements.
+        </li>
+
+        <li>
+          Collaborated remotely using version-control and development
+          workflows while implementing assigned software and web-development tasks.
+        </li>
+      </ul>
+
+      <div class="experience-tech">
+        <span>React</span>
+        <span>JavaScript</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>Python</span>
+        <span>Django</span>
+        <span>MySQL</span>
+        <span>Git</span>
+      </div>
+
+    </div>
+
+
+    <!-- KODNEST -->
+    <div class="experience-card">
+
+      <div class="experience-top">
+        <div>
+          <h3>Java Full Stack Intern</h3>
+          <h4>KODNEST</h4>
+        </div>
+
+        <div class="experience-date">
+          Jan 2024 – Jun 2024
+        </div>
+      </div>
+
+      <div class="experience-location">
+        Software Development · Java Full Stack
+      </div>
+
+      <p class="experience-summary">
+        Built backend and full-stack application components using Java,
+        Spring-based development practices, REST APIs, and relational
+        and NoSQL databases.
+      </p>
+
+      <ul>
+        <li>
+          Developed and tested <strong>10 REST API endpoints</strong>
+          supporting application functionality and backend workflows.
+        </li>
+
+        <li>
+          Implemented <strong>3 application modules</strong> using Java,
+          object-oriented programming, database operations, and backend
+          application logic.
+        </li>
+
+        <li>
+          Worked with <strong>MySQL and MongoDB</strong> for storing,
+          querying, and managing application data.
+        </li>
+
+        <li>
+          Applied debugging, API testing, Git-based version control,
+          and software-development practices while building and
+          refining application functionality.
+        </li>
+      </ul>
+
+      <div class="experience-tech">
+        <span>Java</span>
+        <span>Spring Boot</span>
+        <span>REST APIs</span>
+        <span>MySQL</span>
+        <span>MongoDB</span>
+        <span>OOP</span>
+        <span>Git</span>
+        <span>API Testing</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+```
+
+And add this CSS inside your existing `<style>` section:
+
+```css
+/* =========================
+   EXPERIENCE
+========================= */
+
+.section-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #8b7355;
+  margin-bottom: 8px;
+}
+
+#experience h2 {
+  color: #3d3329;
+  border-bottom: 1px solid #d8cbbd;
+}
+
+.experience-timeline {
+  position: relative;
+  margin-top: 35px;
+  padding-left: 35px;
+}
+
+.experience-timeline::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 10px;
+  bottom: 10px;
+  width: 2px;
+  background: #d8cbbd;
+}
+
+.experience-card {
+  position: relative;
+  background: #fffdf9;
+  border: 1px solid #e3d9cd;
+  border-radius: 14px;
+  padding: 30px;
+  margin-bottom: 28px;
+  box-shadow: 0 10px 30px rgba(65, 50, 35, 0.08);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.experience-card::before {
+  content: "";
+  position: absolute;
+  left: -35px;
+  top: 34px;
+  width: 12px;
+  height: 12px;
+  background: #8b7355;
+  border: 4px solid #f7f3ee;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px #cbbbaa;
+}
+
+.experience-card:hover {
+  transform: translateX(6px);
+  box-shadow: 0 18px 40px rgba(65, 50, 35, 0.13);
+  border-color: #cbbbaa;
+}
+
+.experience-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.experience-card h3 {
+  color: #302921;
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.experience-card h4 {
+  color: #8b7355;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.experience-date {
+  color: #76695d;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  background: #f2ece5;
+  padding: 7px 12px;
+  border-radius: 20px;
+}
+
+.experience-location {
+  color: #8a8178;
+  font-size: 13px;
+  margin-top: 8px;
+  margin-bottom: 18px;
+}
+
+.experience-summary {
+  color: #554b42;
+  font-size: 15px;
+  line-height: 1.75;
+  margin-bottom: 20px;
+}
+
+.experience-card ul {
+  padding-left: 20px;
+  margin-bottom: 22px;
+}
+
+.experience-card li {
+  color: #554b42;
+  font-size: 14px;
+  line-height: 1.75;
+  margin-bottom: 10px;
+}
+
+.experience-card li strong {
+  color: #40362d;
+}
+
+.experience-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 18px;
+  border-top: 1px solid #ebe3da;
+}
+
+.experience-tech span {
+  padding: 6px 11px;
+  background: #f1ebe4;
+  color: #695644;
+  border: 1px solid #ded2c5;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.experience-tech span:hover {
+  background: #e6dbcf;
+  transform: translateY(-2px);
+  transition: 0.2s ease;
+}
+
+
+/* MOBILE EXPERIENCE */
+
+@media (max-width: 768px) {
+
+  .experience-timeline {
+    padding-left: 20px;
+  }
+
+  .experience-timeline::before {
+    left: 2px;
+  }
+
+  .experience-card {
+    padding: 22px;
+  }
+
+  .experience-card::before {
+    left: -26px;
+  }
+
+  .experience-top {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .experience-date {
+    align-self: flex-start;
+  }
+
+  .experience-card h3 {
+    font-size: 19px;
+  }
+}
+```
+
+Also add **Experience** to your navigation:
+
+```html
+<a href="#experience">Experience</a>
+```
+
+I would place the sections in this order:
+
+**Hero → About → Experience → Skills → Projects → Education → Certifications → Contact**
+
+That order is more recruiter-oriented because your **actual development experience appears before the long technical-skills/project sections**.
 
     /* =========================================================
        FEATURED PROJECT
