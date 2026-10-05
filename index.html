@@ -946,53 +946,55 @@ section {
 }
 
 .section-header {
-    text-align: center;
-    margin-bottom: 40px;
+    text-align: left;
+    margin-bottom: 35px;
 }
 
 .section-header h2 {
     font-size: 36px;
-    margin-bottom: 10px;
+    margin: 0 0 10px;
 }
 
 .section-header p {
     font-size: 16px;
+    margin: 0;
     opacity: 0.75;
 }
 
 .scholarship-card {
     display: flex;
     align-items: flex-start;
-    gap: 28px;
-    max-width: 850px;
-    margin: 0 auto;
-    padding: 35px;
+    gap: 25px;
+    width: 100%;
+    padding: 30px;
     border-radius: 18px;
     background: #ffffff;
     border: 1px solid #e5e7eb;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+    box-sizing: border-box;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .scholarship-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.10);
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.10);
 }
 
 .scholarship-icon {
-    width: 65px;
-    height: 65px;
-    min-width: 65px;
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 15px;
+    border-radius: 14px;
     background: #f3f4f6;
-    font-size: 32px;
+    font-size: 30px;
 }
 
 .scholarship-content {
     flex: 1;
+    text-align: left;
 }
 
 .scholarship-content h3 {
@@ -1008,7 +1010,7 @@ section {
 }
 
 .scholarship-department {
-    margin: 0 0 18px;
+    margin: 0 0 16px;
     font-size: 15px;
     font-weight: 500;
     opacity: 0.75;
@@ -1016,32 +1018,50 @@ section {
 
 .scholarship-description {
     margin: 0;
-    line-height: 1.7;
     font-size: 15px;
+    line-height: 1.7;
 }
 
 .scholarship-details {
     display: flex;
     align-items: center;
-    gap: 12px;
-    margin-top: 22px;
-    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
 }
 
 .scholarship-badge,
 .scholarship-year {
-    display: inline-block;
-    padding: 7px 14px;
+    padding: 6px 13px;
     border-radius: 20px;
+    background: #f3f4f6;
     font-size: 13px;
     font-weight: 600;
-    background: #f3f4f6;
 }
 
-.scholarship-year {
-    font-weight: 700;
-}
+/* Mobile */
 
+@media (max-width: 768px) {
+
+    .scholarship-section {
+        padding: 60px 18px;
+    }
+
+    .section-header h2 {
+        font-size: 30px;
+    }
+
+    .scholarship-card {
+        padding: 24px;
+        flex-direction: column;
+    }
+
+    .scholarship-icon {
+        width: 55px;
+        height: 55px;
+        min-width: 55px;
+    }
+
+}
 /* =========================================
    MOBILE RESPONSIVE
    ========================================= */
@@ -2198,8 +2218,6 @@ footer {
 
 </section>
 
-<!-- SCHOLARSHIP -->
-
 <section id="scholarship" class="scholarship-section">
 
     <div class="section-header">
@@ -2217,9 +2235,7 @@ footer {
 
             <h3>Master's Student Scholarship</h3>
 
-            <h4>
-                University of North Texas
-            </h4>
+            <h4>University of North Texas</h4>
 
             <p class="scholarship-department">
                 Computer Engineering and Computer Science Department
