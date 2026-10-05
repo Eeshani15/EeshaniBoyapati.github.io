@@ -935,7 +935,145 @@ section {
 
     font-size: 11px;
 }
+/* =========================================
+   SCHOLARSHIP SECTION
+   ========================================= */
 
+.scholarship-section {
+    padding: 80px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.section-header p {
+    font-size: 16px;
+    opacity: 0.75;
+}
+
+.scholarship-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 28px;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 35px;
+    border-radius: 18px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.scholarship-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.10);
+}
+
+.scholarship-icon {
+    width: 65px;
+    height: 65px;
+    min-width: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background: #f3f4f6;
+    font-size: 32px;
+}
+
+.scholarship-content {
+    flex: 1;
+}
+
+.scholarship-content h3 {
+    margin: 0 0 8px;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.scholarship-content h4 {
+    margin: 0 0 6px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.scholarship-department {
+    margin: 0 0 18px;
+    font-size: 15px;
+    font-weight: 500;
+    opacity: 0.75;
+}
+
+.scholarship-description {
+    margin: 0;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+.scholarship-details {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 22px;
+    flex-wrap: wrap;
+}
+
+.scholarship-badge,
+.scholarship-year {
+    display: inline-block;
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    background: #f3f4f6;
+}
+
+.scholarship-year {
+    font-weight: 700;
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    .scholarship-section {
+        padding: 60px 18px;
+    }
+
+    .section-header h2 {
+        font-size: 30px;
+    }
+
+    .scholarship-card {
+        flex-direction: column;
+        padding: 25px;
+        gap: 20px;
+    }
+
+    .scholarship-icon {
+        width: 55px;
+        height: 55px;
+        min-width: 55px;
+        font-size: 27px;
+    }
+
+    .scholarship-content h3 {
+        font-size: 22px;
+    }
+
+}
 
 /* =========================================================
    CERTIFICATIONS
@@ -2060,23 +2198,49 @@ footer {
 
 </section>
 
-<div class="achievement-card">
+<!-- SCHOLARSHIP -->
 
-    <h3>Master's Student Scholarship</h3>
+<section id="scholarship" class="scholarship-section">
 
-    <p class="achievement-issuer">
-        University of North Texas
-    </p>
+    <div class="section-header">
+        <h2>Scholarship</h2>
+        <p>Academic Recognition</p>
+    </div>
 
-    <p class="achievement-description">
-        Awarded by the Computer Engineering and Computer Science Department
-        in recognition of academic achievement and graduate-level study in
-        Computer and Information Science.
-    </p>
+    <div class="scholarship-card">
 
-    <span class="achievement-date">2025</span>
+        <div class="scholarship-icon">
+            🎓
+        </div>
 
-</div>
+        <div class="scholarship-content">
+
+            <h3>Master's Student Scholarship</h3>
+
+            <h4>
+                University of North Texas
+            </h4>
+
+            <p class="scholarship-department">
+                Computer Engineering and Computer Science Department
+            </p>
+
+            <p class="scholarship-description">
+                Awarded the Master's Student Scholarship in recognition of
+                academic achievement and graduate-level study in Computer
+                and Information Science.
+            </p>
+
+            <div class="scholarship-details">
+                <span class="scholarship-badge">Academic Scholarship</span>
+                <span class="scholarship-year">2025</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 <!-- =======================================================
      CERTIFICATIONS
 ======================================================== -->
